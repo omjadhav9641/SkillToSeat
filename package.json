@@ -1,0 +1,19 @@
+{
+  "name": "startupmeu-placement-platform",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev -w server\" \"npm run dev -w client\"",
+    "build": "npm run build -w client",
+    "start": "npm run start -w server",
+    "screenshots": "node capture_screenshots.mjs"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "puppeteer-core": "^25.13.0"
+  }
+}
